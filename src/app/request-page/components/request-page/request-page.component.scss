@@ -1,0 +1,59 @@
+$heading-font: 'PlayfairDisplay';
+$regular-font: 'SofiaPro';
+$primary-color: #222;
+
+:host {
+	background: #fff;
+}
+.container {
+	max-width: 1150px;
+	padding-top: 120px;
+}
+
+h1 {
+	font: {
+		family: $heading-font;
+		size: 48px;
+	}
+	margin-bottom: 0;
+	line-height: 1.25;
+	color: $primary-color;
+}
+
+h2.heading-enum {
+	margin-top: 16px;
+	font: {
+		family: $heading-font;
+		size: 54px;
+	}
+	line-height: 1;
+	opacity: 0.5;
+}
+
+h1, h2 {
+	font-weight: normal;
+}
+
+h2, p {
+	font-family: $regular-font;
+	color: $primary-color;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+p {
+	font-size: 20px;
+	line-height: 1.5;
+	opacity: 0.6;
+}
+
+.request-heading p {
+	font-size: 24px;
+	max-width: 600px;
+}
+
+.text-content {
+	max-width: 450px;
+}

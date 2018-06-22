@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { RequestPageModule } from './request-page/request-page.module';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RequestPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
