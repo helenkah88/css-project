@@ -8,10 +8,12 @@ h1 {
   font: {
     family: $heading-font;
     size: 48px;
+    weight: normal;
   }
   margin-bottom: 0;
   line-height: 1.25;
   color: $primary-color;
+  letter-spacing: 1.3px;
 }
 
 h6 {
@@ -23,16 +25,14 @@ h6 {
   opacity: .5;
 }
 
-p {
-  font: {
-    family: $regular-font;
-    size: 20px;
-  }
-  color: $primary-color;
-  line-height: 1.5;
-  opacity: 0.6;
+.faq-block {
+  padding-right: 20px;
 }
 
+.faq-block + .faq-block {
+  padding-left: 20px;
+  padding-right: 0;
+}
 .faq-wrapper {
   padding: 0 77px;
   background-image: linear-gradient(to top, #f7eae4, rgba(247, 234, 228, 0));
@@ -42,42 +42,5 @@ p {
   }
   li {
     border-bottom: 2px solid rgba(34, 34, 34, 0.25);
-    .card {
-      background: none;
-      border: none;
-      font: {
-        family: $regular-font;
-        size: 20px;
-      }
-      opacity: 0.6;
-      line-height: 1.5;
-      letter-spacing: 0.5px;
-      color: $primary-color;
-    }
-  }
-  a {
-    background: none;
-    border: none;
-    outline: none;
-    padding: 0;
-    line-height: normal;
-    letter-spacing: 0.6px;
-    color: $primary-color;
-    font: {
-      family: $regular-font;
-      size: 24px;
-    }
-    &:hover {
-      text-decoration: none;
-    }
-    &:before {
-      content: '';
-      display: inline-block;
-      width: 32px;
-      height: 32px;
-      margin-right: 14px;
-      vertical-align: bottom;
-      background: url('/assets/img/back-arrow/back-arrow.png') no-repeat center;
-    }
   }
 }

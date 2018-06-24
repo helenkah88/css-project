@@ -36,6 +36,9 @@ main {
 
 .req-instructions {
   margin-bottom: 270px;
+  @include tablet-breakpoint {
+  	margin-bottom: 154px;
+  }
 }
 
 h1 {
@@ -89,15 +92,9 @@ p {
   }
 }
 
-.img-block.step-1 img {
-  @include desktop-breakpoint {
-    margin-left: -44px;
-  }
-}
-
 .img-block.step-2 img {
   @include desktop-breakpoint {
-    margin-left: -100px;
+    margin-left: -35px;
   }
 }
 
@@ -126,6 +123,8 @@ p {
 
 .text-content {
   max-width: 450px;
+  padding-left: 8px;
+  box-sizing: content-box;
 
   @include tablet-breakpoint {
     margin: auto;

@@ -1,16 +1,19 @@
 <main>
-  <div class="container req-instructions">
+  <div class="container req-instructions px-2 px-lg-0">
     <div class="row">
-      <div class="request-heading col-lg-7">
+      <div class="request-heading col-xl-14 pl-xl-9">
         <h1>How to send a request</h1>
         <p>Follow these instructions for setting up and booking your first model on our platform.</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-6 pl-0 order-lg-2 img-block step-1">
-        <img src="/assets/img/browse-pic/browse-pic.png" alt="">
+    <div *ngFor="let step of stepsInfo; index as i">
+      <app-request-step [stepInfo]="step" [idx]="i"></app-request-step>
+    </div>
+    <!-- <div class="row">
+      <div class="col-xl-12 pl-0 order-xl-2 img-block step-1">
+        <app-image [imgUrl]="imgUrls[0]"></app-image>
       </div>
-      <div class="col-lg-6 pl-4 order-lg-1">
+      <div class="col-xl-12 order-xl-1 pl-xl-9">
         <div class="text-content">
           <h2 class="heading-enum">1</h2>
           <h2>Find the perfect model</h2>
@@ -20,10 +23,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-6 img-block step-2">
-        <img src="/assets/img/step-2-pic/step-2-pic.png" alt="">
+      <div class="col-xl-12 img-block step-2">
+        <app-image [imgUrl]="imgUrls[1]"></app-image>
       </div>
-      <div class="col-lg-6 pl-0">
+      <div class="col-xl-12 pl-xl-4">
         <div class="text-content">
           <h2 class="heading-enum">2</h2>
           <h2>Create your request</h2>
@@ -33,10 +36,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-6 pl-0 order-lg-2 img-block">
-        <img src="/assets/img/step-3-pic/step-3-pic.png" alt="">
+      <div class="col-xl-12 pl-xl-4 order-xl-2 img-block">
+        <app-image [imgUrl]="imgUrls[2]"></app-image>
       </div>
-      <div class="col-lg-6 pl-4 order-lg-1">
+      <div class="col-xl-12 order-xl-1 pl-xl-9">
         <div class="text-content">
           <h2 class="heading-enum">3</h2>
           <h2>Receive confirmation</h2>
@@ -46,10 +49,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-6 img-block">
-        <img src="/assets/img/step-4-pic/step-4-pic.png" alt="">
+      <div class="col-xl-12 img-block pl-xl-6">
+        <app-image [imgUrl]="imgUrls[3]"></app-image>
       </div>
-      <div class="col-lg-6">
+      <div class="col-xl-12 pl-xl-4">
         <div class="text-content">
           <h2 class="heading-enum">4</h2>
           <h2>Messaging final details</h2>
@@ -57,7 +60,7 @@
           <p>If you have a model release or call sheet to share, you can include attachments in the message thread.</p>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
   <app-faq-page></app-faq-page>
 </main>

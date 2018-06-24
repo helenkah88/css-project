@@ -1,0 +1,49 @@
+@import 'src/assets/fonts/fonts';
+
+$heading-font: 'PlayfairDisplay';
+$regular-font: 'SofiaPro';
+$primary-color: #222;
+
+a {
+  display: block;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: $primary-color;
+  font: {
+    family: $regular-font;
+    size: 24px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 14px;
+    vertical-align: bottom;
+    background: url('/assets/img/back-arrow/back-arrow.png') no-repeat center;
+  }
+}
+
+.card {
+  background: none;
+  border: none;
+  font: {
+    family: $regular-font;
+    size: 20px;
+  }
+  opacity: 0.6;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: $primary-color;
+}
+
+.collapse {
+  transition: all .3s;
+}
