@@ -5,15 +5,18 @@ const SMALL_SCREEN: number = 640;
 @Component({
   selector: 'app-image',
   template: `
-    <img *ngIf="!isSmallScreen()" src="/assets/img/{{imgUrl}}" srcset="/assets/img/{{imgUrl}}@2x 2x, {{imgUrl}}@3x 3x" alt="">
-    <img *ngIf="isSmallScreen()" src="/assets/img/mobile/{{imgUrl}}" srcset="/assets/img/mobile/{{imgUrl}}@2x 2x, {{imgUrl}}@3x 3x" alt="">
+    <img [ngClass]="setClass(idx)" *ngIf="!isSmallScreen()" src="{{imgPath}}/{{imgUrl}}.png" srcset="{{imgPath}}/{{imgUrl}}@2x.png 2x, {{imgPath}}/{{imgUrl}}@3x.png 3x" alt="">
+    <img [ngClass]="setClass(idx)" *ngIf="isSmallScreen()" src="{{imgPath}}/mobile/{{imgUrl}}.png" srcset="{{imgPath}}/mobile/{{imgUrl}}@2x.png 2x, {{imgPath}}/{{imgUrl}}@3x.png 3x" alt="">
   `,
-  styles: []
+  styleUrls: ['./image.component.scss']
 })
 export class ImageComponent implements OnInit {
 
   private matchMedia: MediaQueryList = matchMedia(`(max-width: ${SMALL_SCREEN}px)`);
   @Input() imgUrl: string;
+  @Input() idx: number;
+  imgPath = '/assets/img';
+
 
   constructor() { }
 
@@ -22,5 +25,9 @@ export class ImageComponent implements OnInit {
 
   isSmallScreen(): boolean {
     return this.matchMedia.matches;
+  }
+
+  setClass(idx) {
+    return `step-${++idx}`
   }
 }

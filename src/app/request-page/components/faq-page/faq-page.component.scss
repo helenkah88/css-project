@@ -1,8 +1,5 @@
 @import 'src/assets/fonts/fonts';
-
-$heading-font: 'PlayfairDisplay';
-$regular-font: 'SofiaPro';
-$primary-color: #222;
+@import 'src/variables';
 
 h1 {
   font: {
@@ -13,7 +10,6 @@ h1 {
   margin-bottom: 0;
   line-height: 1.25;
   color: $primary-color;
-  letter-spacing: 1.3px;
 }
 
 h6 {
@@ -26,15 +22,20 @@ h6 {
 }
 
 .faq-block {
-  padding-right: 20px;
+  @include desktop-breakpoint {
+    padding-right: 20px;
+  }
 }
 
 .faq-block + .faq-block {
-  padding-left: 20px;
-  padding-right: 0;
+  @include desktop-breakpoint {
+    padding-left: 20px;
+    padding-right: 0;
+  }
 }
 .faq-wrapper {
-  padding: 0 77px;
+  padding-left: 77px !important;
+  padding-right: 77px !important;
   background-image: linear-gradient(to top, #f7eae4, rgba(247, 234, 228, 0));
   ul {
     padding: 0;
@@ -42,5 +43,10 @@ h6 {
   }
   li {
     border-bottom: 2px solid rgba(34, 34, 34, 0.25);
+  }
+
+  @include mobile-breakpoint {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 }

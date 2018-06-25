@@ -1,66 +1,14 @@
 <main>
   <div class="container req-instructions px-2 px-lg-0">
     <div class="row">
-      <div class="request-heading col-xl-14 pl-xl-9">
-        <h1>How to send a request</h1>
-        <p>Follow these instructions for setting up and booking your first model on our platform.</p>
+      <div class="request-heading col-xl-14 pl-xl-5">
+        <h1 class="sm-24 mb-1 mb-sm-2">How to send a request</h1>
+        <p class="sm-16">Follow these instructions for setting up and booking your first model on our platform.</p>
       </div>
     </div>
     <div *ngFor="let step of stepsInfo; index as i">
-      <app-request-step [stepInfo]="step" [idx]="i"></app-request-step>
+      <app-request-step [order]="step.order" [stepInfo]="step" [idx]="i"></app-request-step>
     </div>
-    <!-- <div class="row">
-      <div class="col-xl-12 pl-0 order-xl-2 img-block step-1">
-        <app-image [imgUrl]="imgUrls[0]"></app-image>
-      </div>
-      <div class="col-xl-12 order-xl-1 pl-xl-9">
-        <div class="text-content">
-          <h2 class="heading-enum">1</h2>
-          <h2>Find the perfect model</h2>
-          <p>Use the search filters on the Browse page to find a model to best fit your job.</p>
-          <p>Once you find the perfect model, go to their profile and click on Send Request. You will have the option between a Booking, Option, and Casting invitation. (More on request types below).</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xl-12 img-block step-2">
-        <app-image [imgUrl]="imgUrls[1]"></app-image>
-      </div>
-      <div class="col-xl-12 pl-xl-4">
-        <div class="text-content">
-          <h2 class="heading-enum">2</h2>
-          <h2>Create your request</h2>
-          <p>Fill out the request form with details of your job. If you have an existing Project, you can use the Project Title dropdown to prefill Project information - time saver!</p>
-          <p>The more detailed you are, the more likely a model will be to accept your request.</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xl-12 pl-xl-4 order-xl-2 img-block">
-        <app-image [imgUrl]="imgUrls[2]"></app-image>
-      </div>
-      <div class="col-xl-12 order-xl-1 pl-xl-9">
-        <div class="text-content">
-          <h2 class="heading-enum">3</h2>
-          <h2>Receive confirmation</h2>
-          <p>After sending your request, the model will have the opportunity to accept or decline. Usually models respond within 24 hours.</p>
-          <p>You will receive an email and a notification in your web account when the model responds.</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xl-12 img-block pl-xl-6">
-        <app-image [imgUrl]="imgUrls[3]"></app-image>
-      </div>
-      <div class="col-xl-12 pl-xl-4">
-        <div class="text-content">
-          <h2 class="heading-enum">4</h2>
-          <h2>Messaging final details</h2>
-          <p>Once your booking is confirmed, you can continzue messaging directly with the model about any last-minute details, like where to park or what to wear.</p>
-          <p>If you have a model release or call sheet to share, you can include attachments in the message thread.</p>
-        </div>
-      </div>
-    </div> -->
   </div>
   <app-faq-page></app-faq-page>
 </main>

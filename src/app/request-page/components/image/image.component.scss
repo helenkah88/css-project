@@ -1,0 +1,26 @@
+@import 'src/variables';
+
+img {
+  @include tablet-breakpoint {
+    display: block;
+    margin: auto;
+  }
+
+  @include mobile-breakpoint {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  &.step-2 {
+	@include desktop-breakpoint {
+		margin-left: -102px;
+	}
+  }
+
+  &.step-1 {
+	@include desktop-breakpoint {
+		margin-left: -32px;
+	}
+  }
+}

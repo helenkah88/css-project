@@ -1,8 +1,5 @@
 @import 'src/assets/fonts/fonts';
-
-$heading-font: 'PlayfairDisplay';
-$regular-font: 'SofiaPro';
-$primary-color: #222;
+@import 'src/variables';
 
 a {
   display: block;

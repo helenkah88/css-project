@@ -1,12 +1,12 @@
 <div class="row">
-  <div class="col-xl-12 img-block" [ngClass]="setClass(idx)">
-    <app-image [imgUrl]="stepInfo.imgUrl"></app-image>
+  <div class="col-xl-12 pt-5 pt-lg-9 pt-xl-0" [ngClass]="order === 'odd' ? 'order-xl-2' : 'pl-xl-5'">
+    <app-image [imgUrl]="stepInfo.imgUrl" [idx]="idx"></app-image>
   </div>
-  <div class="col-xl-12 pl-xl-4">
-    <div class="text-content">
-      <h2 class="heading-enum">{{ idx + 1 }}</h2>
-      <h2>{{ stepInfo.textInfo.title }}</h2>
-      <p *ngFor="let text of stepInfo.textInfo.text">{{ text }}</p>
+  <div class="col-xl-12 pb-lg-9" [ngClass]="order === 'odd' ? 'order-xl-1 pl-xl-5' : ''">
+    <div class="text-content pl-xl-1">
+      <h2 class="heading-enum mt-0 mt-lg-2">{{ idx + 1 }}</h2>
+      <h2 class="sm-24">{{ stepInfo.textInfo.title }}</h2>
+      <p class="sm-16" *ngFor="let text of stepInfo.textInfo.text">{{ text }}</p>
     </div>
   </div>
 </div>

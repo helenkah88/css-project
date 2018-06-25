@@ -1,20 +1,5 @@
 @import 'src/assets/fonts/fonts';
-
-$heading-font: 'PlayfairDisplay';
-$regular-font: 'SofiaPro';
-$primary-color: #222;
-
-@mixin desktop-breakpoint {
-  @media screen and (min-width: 1025px) {
-    @content;
-  }
-}
-
-@mixin tablet-breakpoint {
-  @media screen and (max-width: 1024px) {
-    @content;
-  }
-}
+@import 'src/variables';
 
 :host {
   background: #fff;
@@ -82,6 +67,10 @@ p {
   opacity: 0.6;
 }
 
+p:last-child {
+	margin-bottom: 0;
+}
+
 .request-heading {
   margin-bottom: 100px;
   @include tablet-breakpoint {
@@ -90,21 +79,10 @@ p {
     padding: 0;
     margin: auto;
   }
-}
-
-.img-block.step-2 img {
-  @include desktop-breakpoint {
-    margin-left: -35px;
+  @include mobile-breakpoint {
+  	max-width: 328px;
   }
-}
 
-.img-block img {
-
-  @include tablet-breakpoint {
-    display: block;
-    width: 80%;
-    margin: auto;
-  }
 }
 
 .request-heading p {

@@ -8,15 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class RequestStepComponent implements OnInit {
 
   @Input() idx: number = 0;
+  @Input() order: string;
   @Input() stepInfo: any[] = [];
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  setClass(idx) {
-    return `step-${++idx}`
   }
 
 }

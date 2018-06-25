@@ -1,27 +1,50 @@
-$font-size-base: 16px;
+$heading-font: 'PlayfairDisplay';
+$regular-font: 'SofiaPro';
+$primary-color: #222;
 
-$spacer: 1rem;
-$spacer-base: $spacer / 2;
-$spacers: (
-  0: 0,
-  1: $spacer-base,
-  2: $spacer-base * 2,
-  3: $spacer-base * 3,
-  4: $spacer-base * 4,
-  5: $spacer-base * 5,
-  6: $spacer-base * 6,
-  7: $spacer-base * 7,
-  8: $spacer-base * 8,
-  9: $spacer-base * 9,
-);
+@mixin desktop-breakpoint {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
 
-$grid-columns: 24;
-$grid-gutter-width: 0;
+@mixin tablet-breakpoint {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 414px,
-  md: 568px,
-  lg: 768px,
-  xl: 1024px
-);
+@mixin mobile-breakpoint {
+  @media screen and (max-width: 568px) {
+    @content;
+  }
+}
+
+
+@mixin sm-mobile-breakpoint {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+.sm-16 {
+  @include mobile-breakpoint {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.4px !important;
+  }
+}
+
+.sm-24 {
+  @include mobile-breakpoint {
+    font-size: 24px !important;
+    letter-spacing: 0.6px !important;
+  }
+}
+
+.sm-20 {
+  @include sm-mobile-breakpoint {
+    font-size: 20px !important;
+    letter-spacing: 0.5px !important;
+  }
+}
